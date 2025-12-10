@@ -1,0 +1,51 @@
+$primary-color: #ffc107;
+$bg-darker: #050816;
+$text-light: #e8eaed;
+$text-muted: #9ca3af;
+
+.how-it-works-section {
+  padding: 5rem 8vw;
+  background: $bg-darker;
+
+  @media (max-width: 768px) {
+    padding: 3rem 4vw;
+  }
+}
+
+.step-card {
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.step-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(255, 191, 0, 0.847);
+  margin-bottom: 0.8rem;
+}
+
+.step-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: $text-light;
+}
+
+.step-description {
+  color: $text-muted;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

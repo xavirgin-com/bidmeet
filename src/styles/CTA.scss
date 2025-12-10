@@ -1,0 +1,88 @@
+$primary-color: #ffc107;
+$primary-dark: #ff9800;
+$bg-dark: #0a0e27;
+$bg-darker: #050816;
+$text-light: #e8eaed;
+
+.cta-section {
+  padding: 5rem 8vw;
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+
+  @media (max-width: 768px) {
+    padding: 3rem 4vw;
+  }
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: $bg-dark;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+}
+
+.cta-description {
+  font-size: 1.05rem;
+  color: rgba(10, 14, 39, 0.75);
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta-primary,
+.btn-cta-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+
+  @media (max-width: 768px) {
+    padding: 0.85rem 1.6rem;
+    font-size: 0.95rem;
+  }
+}
+
+.btn-cta-primary {
+  background: $bg-dark;
+  color: $text-light;
+
+  &:hover {
+    background: $bg-darker;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.btn-cta-secondary {
+  background: transparent;
+  color: $bg-dark;
+  border: 2px solid $bg-dark;
+
+  &:hover {
+    background: $bg-dark;
+    color: $text-light;
+  }
+}
