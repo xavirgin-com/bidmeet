@@ -46,10 +46,13 @@ $primary-color: #ffc107;
 }
 
 .footer-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  text-align: left;
+
+  @media (min-width: 992px) {
+    text-align: right;
+  }
 }
+
 
 .contact-item {
   display: flex;
@@ -64,38 +67,6 @@ $primary-color: #ffc107;
   }
 }
 
-.footer-links {
-  margin: 0;
-  
-  @media (max-width: 991px) {
-    margin-top: 1rem;
-  }
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-
-  h4 {
-    color: $text-light;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    font-size: 1rem;
-  }
-
-  a {
-    color: $text-muted;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: $primary-color;
-      padding-left: 3px;
-    }
-  }
-}
 
 .footer-bottom {
   padding-top: 1.5rem;
