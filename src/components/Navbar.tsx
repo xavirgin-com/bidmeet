@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
         <div className="nav-links">
           <a href="#features" className="nav-link-custom">Features</a>
           <a href="#how-it-works" className="nav-link-custom">How It Works</a>
-          <a href="#categories" className="nav-link-custom">Screenshots</a>
+          <a href="#screenshots" className="nav-link-custom">Screenshots</a>
           <a href="#download" className="btn-download">Download App</a>
         </div>
       </div>
