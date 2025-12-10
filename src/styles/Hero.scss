@@ -14,28 +14,14 @@ $border-color: rgba(255, 255, 255, 0.1);
   padding: 0 8vw; 
   position: relative;
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(135deg, $bg-darker 0%, $bg-dark 100%);
-    z-index: 0;
-    
-    @media (max-width: 991px) {
-      width: 100%;
-    }
-  }
+  background: linear-gradient(135deg, $bg-darker 0%, $bg-dark 100%);
 }
 
 .hero-background-image {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 60%; // Extended to overlap more for seamless fade
   height: 100%;
   background-image: url('../assets/heroimg.png');
   background-size: cover;
@@ -43,20 +29,29 @@ $border-color: rgba(255, 255, 255, 0.1);
   background-repeat: no-repeat;
   z-index: 1;
   
-  
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 100%);
-  
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-  }
+  // Seamless fade gradient - starts much earlier and fades very gradually
+  mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(0,0,0,0.05) 10%,
+    rgba(0,0,0,0.15) 20%,
+    rgba(0,0,0,0.3) 30%,
+    rgba(0,0,0,0.5) 40%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.85) 60%,
+    rgba(0,0,0,0.95) 75%,
+    rgba(0,0,0,1) 85%
+  );
+  -webkit-mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(0,0,0,0.05) 10%,
+    rgba(0,0,0,0.15) 20%,
+    rgba(0,0,0,0.3) 30%,
+    rgba(0,0,0,0.5) 40%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.85) 60%,
+    rgba(0,0,0,0.95) 75%,
+    rgba(0,0,0,1) 85%
+  );
 
   @media (max-width: 991px) {
     width: 100%;

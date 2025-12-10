@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
-import Categories from './components/Categories';
+import Screenshots from './components/Screenshots';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <Hero />
       <Features />
       <HowItWorks />
-      <Categories />
+      <Screenshots />
       <CTA />
       <Footer />
     </div>

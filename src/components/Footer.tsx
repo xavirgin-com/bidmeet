@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
               <Gavel size={32} />
               <span>BidMeet</span>
             </div>
-            <p className="footer-tagline">
+            <p className="footer-tagline" >
               Your trusted platform for live bidding and secure transactions.
             </p>
-            <div className="footer-contact">
+            <div className="footer-contact" >
               <div className="contact-item">
                 <MapPin size={18} />
                 <span>Kerala, India</span>
@@ -27,30 +27,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          <div className="col-lg-7 offset-lg-1 footer-menus">
-            <div className="row footer-links">
-              <div className="col-md-4 footer-column">
-                <h4>Product</h4>
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#categories">Categories</a>
-              </div>
-              
-              <div className="col-md-4 footer-column">
-                <h4>Company</h4>
-                <a href="#about">About</a>
-                <a href="#careers">Careers</a>
-                <a href="#contact">Contact</a>
-              </div>
-              
-              <div className="col-md-4 footer-column">
-                <h4>Legal</h4>
-                <a href="#privacy">Privacy</a>
-                <a href="#terms">Terms</a>
-                <a href="#cookies">Cookies</a>
-              </div>
-            </div>
-          </div>
+       
         </div>
         
         <div className="footer-bottom d-flex justify-content-between align-items-center flex-wrap">

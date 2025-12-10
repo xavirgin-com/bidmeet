@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
           <div className="col-lg-6 hero-text fade-in-up">
             <div className="badge-pill">
               <Sparkles size={16} />
-              <span>Live Auctions Now</span>
+              <span>App Available Now</span>
             </div>
             
             <h1 className="hero-title">
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="col-lg-6 hero-visual">
-            {/* bg*/}
+            {/* Empty space for the background image to show through */}
           </div>
         </div>
       </div>
