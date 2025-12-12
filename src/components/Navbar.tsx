@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Gavel } from 'lucide-react';
+import { Gavel, Menu, X } from 'lucide-react';
 import '../styles/Navbar.scss';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +28,22 @@ const Navbar: React.FC = () => {
           <a href="#screenshots" className="nav-link-custom">Screenshots</a>
           <a href="#download" className="btn-download">Download App</a>
         </div>
+
+        <button 
+          className="mobile-menu-toggle" 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <a href="#features" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Features</a>
+        <a href="#how-it-works" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>How It Works</a>
+        <a href="#screenshots" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Screenshots</a>
+        <a href="#download" className="btn-download-mobile" onClick={() => setMobileMenuOpen(false)}>Download App</a>
       </div>
     </nav>
   );
